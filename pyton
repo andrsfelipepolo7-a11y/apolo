@@ -1,0 +1,46 @@
+import pandas as pd
+
+# Cargamos el archivo CSV
+file_path = ("Listado_Colegios.csv")
+df = pd.read_csv(file_path)
+
+# Leer el archivo CSV en un DataFrame
+data = pd.read_csv(file_path)
+
+# Visualizamos las primeras filas del DataFrame
+print ("Primeras filas del DataFrame")
+print(df.head())
+
+
+# Verificamos la información general del DataFrame (tipos de datos, valores no nulos, etc.)
+print("\nInformación del DataFrame")
+print(df.info())
+
+# 1. Mostrar las primeras 10 filas del DataFrame
+print("\nPrimeras 10 filas del dataset:")
+print(data.head(10))
+
+# 2. Mostrar las últimas 10 filas del DataFrame
+print("\nÚltimas 10 filas del dataset:")
+print(data.tail(10))
+
+# 3. Mostrar información general del DataFrame, incluyendo tipos de datos y memoria usada
+print("\nInformación del dataset")
+data.info()
+
+# 4. Mostrar nombres de las columnas
+print("\nNombres de las columnas")
+print(data.columns)
+
+# 5. Contar el número de valores únicos en cada columna
+print("\nNúmero de valores únicos por columna")
+print(data.nunique())
+
+# 6. Mostrar ejemplos de filas duplicadas (si existen)
+duplicated_rows = data[data.duplicated()]
+if not duplicated_rows.empty:
+    print("\nFilas duplicadas (primeras 5)")
+    print(duplicated_rows.head())
+else:
+    print("\nNo hay filas duplicadas en el dataset.")
+
