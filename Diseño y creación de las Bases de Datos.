@@ -1,0 +1,8 @@
+DDL(DataDefinition Language): Utilizados para definir y modificar la estructura de la base de datos. 
+CREATE:CREATE TABLE Clientes (ID INT PRIMARY KEY, Nombre VARCHAR(100), Email VARCHAR(100)); 
+ALTER: ALTER TABLE Clientes ADD FechaRegistro DATE; 
+DROP: DROPTABLE Clientes;
+
+
+DML(DataManipulation Language): Utilizados para manipular los datos dentro de la base de datos. 
+INSERT: INSERT INTO Clientes (Nombre, Email) VALUES ('Juan Perez', 'juan@example.com'); SELECT: SELECT * FROMClientes WHERE Nombre= 'Juan Perez'; UPDATE:UPDATE Clientes SET Email = 'juan.p@example.com' WHERE Nombre = 'Juan Perez'; DELETE: DELETE FROMClientes WHERE Nombre= 'Juan Perez';
